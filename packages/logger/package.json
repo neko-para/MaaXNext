@@ -1,0 +1,11 @@
+{
+  "name": "@maax/logger",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/node": "^18.17.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}
