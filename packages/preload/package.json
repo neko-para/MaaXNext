@@ -1,0 +1,9 @@
+{
+  "name": "@maax/preload",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/tsconfig": "^0.4.0",
+    "typescript": "^5.1.6",
+    "vue": "^3.3.4"
+  }
+}

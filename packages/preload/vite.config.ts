@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
-import { resolve } from 'path'
+import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config
 export default defineConfig({
   root: __dirname,
   build: {
     lib: {
-      entry: 'src/index.js',
+      entry: 'src/index.ts',
       name: 'preload',
       formats: ['cjs'],
       fileName: () => '[name].js'
@@ -16,5 +16,6 @@ export default defineConfig({
     rollupOptions: {
       external: ['electron']
     }
-  }
+  },
+  plugins: [vue()]
 })

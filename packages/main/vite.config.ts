@@ -6,7 +6,7 @@ export default defineConfig({
   root: __dirname,
   build: {
     lib: {
-      entry: 'src/index.js',
+      entry: 'src/index.ts',
       name: 'main',
       formats: ['cjs'],
       fileName: () => '[name].js'

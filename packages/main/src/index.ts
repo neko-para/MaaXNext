@@ -1,5 +1,5 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
+import { app, BrowserWindow } from 'electron'
+import * as path from 'path'
 
 const createWindow = () => {
   // Create the browser window.
@@ -11,12 +11,12 @@ const createWindow = () => {
     // }
   })
 
-  if (process.env.VITE_DEV_SERVER_HOST) {
+  if (app.isPackaged) {
+    mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'))
+  } else {
     mainWindow.loadURL(
       `http://${process.env.VITE_DEV_SERVER_HOST}:${process.env.VITE_DEV_SERVER_PORT}`
     )
-  } else {
-    mainWindow.loadFile(path.join(__dirname, `../renderer/index.html`))
   }
 
   // Open the DevTools.

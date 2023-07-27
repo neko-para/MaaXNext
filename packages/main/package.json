@@ -1,0 +1,7 @@
+{
+  "name": "@maax/main",
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "typescript": "^5.1.6"
+  }
+}
