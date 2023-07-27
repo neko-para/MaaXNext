@@ -34,16 +34,7 @@ export type TLoggerEnv = {
   /**
    * time info
    */
-  date: {
-    year: number
-    month: number
-    date: number
-
-    hour: number
-    minute: number
-    second: number
-    msec: number // XXX
-  }
+  date: Date
 
   /**
    * log level

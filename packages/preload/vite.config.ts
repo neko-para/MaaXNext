@@ -15,7 +15,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       external: ['electron']
-    }
+    },
+    sourcemap: true
   },
   plugins: [vue()]
 })

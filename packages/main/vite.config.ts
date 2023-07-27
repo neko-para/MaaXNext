@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { builtinModules } from 'module'
 import { resolve } from 'path'
 
 // https://vitejs.dev/config
@@ -14,7 +15,8 @@ export default defineConfig({
     outDir: '../../dist/main',
     emptyOutDir: true,
     rollupOptions: {
-      external: ['electron']
-    }
+      external: ['electron', ...builtinModules]
+    },
+    sourcemap: true
   }
 })

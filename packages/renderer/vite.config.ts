@@ -10,7 +10,8 @@ export default defineConfig({
     port: 5173
   },
   build: {
-    outDir: '../../dist/renderer'
+    outDir: '../../dist/renderer',
+    sourcemap: true
   },
   resolve: {
     alias: {
