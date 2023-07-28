@@ -17,6 +17,9 @@ export default defineConfig({
     rollupOptions: {
       external: ['electron', ...builtinModules]
     },
+    commonjsOptions: {
+      ignoreDynamicRequires: true
+    },
     sourcemap: true
   }
 })

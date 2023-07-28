@@ -9,7 +9,8 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish"
+    "publish": "electron-forge publish",
+    "postinstall": "node scripts/init.mjs"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.2.1",

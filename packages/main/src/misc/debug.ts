@@ -1,6 +1,7 @@
 import installExtension from 'electron-devtools-installer'
 import { BrowserWindow } from 'electron'
-import { logger } from './logger'
+
+import { logger } from '@maax/logger'
 
 function useDebug(window: BrowserWindow): void {
   installExtension('nhdogjmejiglipccpnnnanhbledajbpd')

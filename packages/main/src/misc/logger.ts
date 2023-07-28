@@ -9,9 +9,7 @@ import { getAppBaseDir } from './path'
 export let mainLogger: Logger
 export let rendererLogger: Logger
 
-export let logger: TLogger
-
-function init() {
+export function initLogger() {
   Logger.init()
 
   const logDir = path.join(getAppBaseDir(), 'logs')
@@ -24,7 +22,6 @@ function init() {
 
   mainLogger = new Logger('main', ws)
   rendererLogger = new Logger('renderer', ws)
-  logger = mainLogger.logger
-}
 
-init()
+  mainLogger.activate()
+}

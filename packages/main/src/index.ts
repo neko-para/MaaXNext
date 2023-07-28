@@ -2,9 +2,18 @@ import { app, BrowserWindow } from 'electron'
 import * as path from 'path'
 import sms from 'source-map-support'
 
+import { MaaFrameworkLoader } from '@maax/loader'
+import { logger } from '@maax/logger'
+
 import useDebug from './misc/debug'
+import { initLogger } from './misc/logger'
 
 sms.install()
+
+initLogger()
+
+const mfl = new MaaFrameworkLoader()
+mfl.load('./maa/bin')
 
 const createWindow = () => {
   // Create the browser window.

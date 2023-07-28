@@ -5,6 +5,8 @@ import { createFormatter, createLogger, initLogger } from './core'
 
 export type { TLogger }
 
+export let logger: TLogger
+
 export class Logger {
   logger: TLogger
   ctrl: TLoggerController
@@ -24,5 +26,9 @@ export class Logger {
 
   static init(prefix = process.cwd(), level: 0 | 1 | 2 | 3 = 3) {
     initLogger(prefix, level)
+  }
+
+  activate() {
+    logger = this.logger
   }
 }
