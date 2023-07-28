@@ -3,7 +3,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/tsconfig": "^0.4.0",
+    "naive-ui": "^2.34.4",
     "typescript": "^5.1.6",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   }
 }

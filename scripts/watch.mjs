@@ -2,6 +2,21 @@ import { spawn } from 'child_process'
 import { createServer, build } from 'vite'
 import electron from 'electron'
 
+let quitTimer = null
+
+function startQuit() {
+  quitTimer = setTimeout(() => {
+    process.exit(0)
+  }, 1000)
+}
+
+function stopQuit() {
+  if (quitTimer) {
+    clearTimeout(quitTimer)
+    quitTimer = null
+  }
+}
+
 /**
  * @type {(server: import('vite').ViteDevServer) => Promise<import('rollup').RollupWatcher>}
  */
@@ -23,6 +38,8 @@ function watchMain(server) {
       {
         name: 'electron-main-watcher',
         writeBundle() {
+          stopQuit()
+
           if (electronProcess) {
             electronProcess.kill()
           }
@@ -30,6 +47,10 @@ function watchMain(server) {
           electronProcess = spawn(electron, ['.', '--inspect'], {
             stdio: 'inherit',
             env
+          })
+
+          electronProcess.on('exit', () => {
+            startQuit()
           })
         }
       }
