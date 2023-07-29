@@ -4,7 +4,7 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",
     "@types/node": "^18.17.1",
-    "koffi": "^2.5.8",
+    "koffi": "^2.5.9",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
   }
