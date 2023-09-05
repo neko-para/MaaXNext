@@ -3,6 +3,7 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",
     "date-fns": "^2.30.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vite-plugin-native": "^0.2.0"
   }
 }
