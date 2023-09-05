@@ -2,8 +2,9 @@
   "name": "@maax/main",
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",
+    "@types/rollup-plugin-natives": "^0.7.0",
     "date-fns": "^2.30.0",
-    "typescript": "^5.1.6",
-    "vite-plugin-native": "^0.2.0"
+    "rollup-plugin-natives": "^0.7.8",
+    "typescript": "^5.1.6"
   }
 }
