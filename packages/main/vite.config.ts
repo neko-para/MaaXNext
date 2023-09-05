@@ -12,12 +12,10 @@ export default defineConfig({
         if (mapping.id === 'koffi.node') {
           const m = /\/([^/]+)\/koffi.node$/.exec(mapping.native)
           if (m) {
-            console.log(mapping.output, m[1])
             mapping.output = mapping.output.replace('koffi.node', `${m[1]}.node`)
             // mapping.id = `./${m[1]}.node`
             mapping.id = `./darwin_x64.node`
           }
-          console.log(mapping)
         }
         return mapping
       },
@@ -33,7 +31,7 @@ export default defineConfig({
       fileName: () => '[name].js'
     },
     outDir: '../../dist/main',
-    emptyOutDir: true,
+    // emptyOutDir: true,
     rollupOptions: {
       external: ['electron', ...builtinModules]
     },
