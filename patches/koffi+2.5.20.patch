@@ -1,0 +1,20 @@
+diff --git a/node_modules/koffi/src/index.js b/node_modules/koffi/src/index.js
+index a73da88..94ddc85 100644
+--- a/node_modules/koffi/src/index.js
++++ b/node_modules/koffi/src/index.js
+@@ -446,6 +446,7 @@ if (process.versions.napi == null || process.versions.napi < pkg.cnoke.napi) {
+ var arch = determine_arch();
+ var triplet = `${process.platform}_${arch}`;
+ var native = null;
++/*
+ try {
+   switch (triplet) {
+     case "darwin_arm64":
+@@ -526,6 +527,7 @@ try {
+   }
+ } catch (err) {
+ }
++*/
+ if (native == null) {
+   let names = [
+     `/koffi/${process.platform}_${arch}/koffi.node`,

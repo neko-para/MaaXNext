@@ -14,7 +14,7 @@ export default defineConfig({
     outDir: '../../dist/main',
     emptyOutDir: true,
     rollupOptions: {
-      external: ['electron', ...builtinModules, 'koffi']
+      external: ['electron', ...builtinModules]
     },
     commonjsOptions: {
       ignoreDynamicRequires: true

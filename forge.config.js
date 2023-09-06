@@ -1,5 +1,7 @@
 module.exports = {
-  packagerConfig: {},
+  packagerConfig: {
+    extraResource: ['./koffi']
+  },
   rebuildConfig: {},
   makers: [
     {

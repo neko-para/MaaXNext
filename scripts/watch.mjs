@@ -1,6 +1,7 @@
 import { spawn } from 'child_process'
 import { createServer, build } from 'vite'
 import electron from 'electron'
+import { existsSync, symlinkSync } from 'fs'
 
 let quitTimer = null
 
@@ -42,6 +43,10 @@ function watchMain(server) {
 
           if (electronProcess) {
             electronProcess.kill()
+          }
+
+          if (!existsSync('dist/main/koffi')) {
+            symlinkSync('../../koffi', 'dist/main/koffi', 'dir')
           }
 
           electronProcess = spawn(electron, ['.', '--inspect'], {

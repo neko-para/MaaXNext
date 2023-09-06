@@ -9,7 +9,8 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish"
+    "publish": "electron-forge publish",
+    "postinstall": "node scripts/init.js && patch-package"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.2.1",
@@ -18,6 +19,7 @@
     "@types/source-map-support": "^0.5.6",
     "electron": "^25.3.2",
     "electron-devtools-installer": "^3.2.0",
+    "patch-package": "^8.0.0",
     "source-map-support": "^0.5.21"
   },
   "workspaces": [
